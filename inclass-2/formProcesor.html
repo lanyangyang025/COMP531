@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="author" xontent="Yiqing Lu">
+	<title>pizza order</title>
+</head>
+
+<body>
+	<h1>Pizza Order</h1>
+	<table border="1">
+		<tr>
+			<th>Name</th>
+			<td>
+			<script>
+		 		var sHref = window.location.href;
+		 		var args1 = sHref.split("?"); 
+		 		var args2 = args1[1].split("&");
+				args2[0]=unescape(args2[0]);
+				args2[0]=args2[0].replace(/\+/g, " ");
+				args2[0]=args2[0].replace("name=",'');
+				document.write(args2[0]);
+				console.log(args2[0])
+			</script>
+			</td>
+		</tr>
+		<tr>
+			<th>Address</th>
+			<td>
+			<script>
+		 		var sHref = window.location.href;
+		 		var args1 = sHref.split("?"); 
+		 		var args2 = args1[1].split("&");
+				args2[1]=unescape(args2[1]);
+				args2[1]=args2[1].replace(/\+/g, " ");
+				args2[1]=args2[1].replace("address=",'');
+				document.write(args2[1]);
+				console.log(args2[1])
+			</script>
+			</td>
+		</tr>
+
+		<tr>
+			<th>Phone Number</th>
+			<td>
+			<script>
+		 		var sHref = window.location.href;
+		 		var args1 = sHref.split("?"); 
+		 		var args2 = args1[1].split("&");
+				args2[2]=unescape(args2[2]);
+				args2[2]=args2[2].replace("phone=",'');
+				document.write(args2[2]);
+				console.log(args2[2])
+			</script>
+			</td>
+		</tr>
+
+		<tr>
+			<th>Pizza Size</th>
+			<td>
+			<script>
+		 		var sHref = window.location.href;
+		 		var args1 = sHref.split("?"); 
+		 		var args2 = args1[1].split("&");
+				args2[3]=unescape(args2[3]);
+				args2[3]=args2[3].replace("size=",'');
+				document.write(args2[3]);
+				console.log(args2[3])
+			</script>
+			</td>
+		</tr>
+
+		<tr>
+			<th>Pizza Topping</th>
+			<td>
+			<script>
+		 		var sHref = window.location.href;
+		 		var args1 = sHref.split("?"); 
+		 		var args2 = args1[1].split("&");
+		 		for(var i=4;i<args2.length-1;i++){
+					args2[i]=unescape(args2[i]);
+					args2[i]=args2[i].replace("topping=",'');
+					document.write(args2[i]+"<br>");
+					console.log(args2[i])
+				}
+			</script>
+			</td>
+		</tr>
+
+		<tr>
+			<th>Time</th>
+			<td>
+				<script>
+			 		var sHref = window.location.href;
+			 		var args1 = sHref.split("?"); 
+			 		var args2 = args1[1].split("&");
+			 		var i=args2.length-1;
+					args2[i]=unescape(args2[i]);
+					args2[i]=args2[i].replace("timestamp=",'');
+					var newDate=new Date();
+					newDate.setTime(args2[i]);
+					document.write(newDate.toString());
+					console.log(newDate.toString())
+				</script>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" xontent="Yiqing Lu">
+	<title>pizza order form</title>
+</head>
+
+<body>
+	<h2>Pizza Guys Order Form</h2>
+	<p>
+		<img src="http://pic3.16pic.com/00/08/45/16pic_845039_b.jpg" width=250>
+	</p>
+	<form id="myForm" method="Get">
+		<p>Name<br><input type="text" name="name" class="clear" size="33" placeholder="your name" required> </p>
+		<p>Address: #### Street Name ...<br><input type="text" name="address" class="clear" size="52" placeholder="delivery address" required></p>
+		<p>Phone Number: 123-123-1234<br><input type="text" name="phone" class="clear" placeholder="123-123-1234" pattern="\d\d\d-\d\d\d-\d\d\d\d"></p>
+
+ 		
+		<p>		
+	    <span style="text-decoration: underline">Pizza size</span><br>
+    	<input type="radio" name="size" value="large" required>Large  
+	    <input type="radio" name="size" value="medium">Medium 
+	    <input type="radio" name="size" value="small">Small 
+	    </p>  
+
+	    <p>
+	    <span style="text-decoration: underline">Pizza Topping</span><br>
+	    <input type="checkbox" name="topping" value="sausage" />Sausage    
+	    <input type="checkbox" name="topping" value="pepperoni" />Pepperoni   
+	    <input type="checkbox" name="topping" value="olives" />Olives     
+	    <input type="checkbox" name="topping" value="anchovies" />Anchovies    
+	    <input type="checkbox" name="topping" value="onions" />Onions     
+	    </p>  
+
+	    <input type="hidden" name="timestamp">
+
+	    <input type="submit" value="Place Order" onclick="return doValidate()">
+		<input type="reset" value="Clear">
+
+	</form>
+
+	<script>
+	function doValidate(){
+		var form=document.getElementById("myForm");
+		form.timestamp.value=Date.now();
+		form.action="formProcesor.html";
+	//	window.alert("Success");
+	}
+
+	function gettime(){
+		return Date.now();
+	}
+
+	</script>
+</body>
+</html>
