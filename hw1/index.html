@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" xontent="Yiqing Lu">
+	<title>Registration Page</title>
+</head>
+
+<body>
+	<h1>Registration Page</h1>
+	<p>
+		<img src="http://en.etemaaddaily.com/pages/world/hyderabad/6011Property-registration-e1437553645318.jpg" width=250>
+	</p>
+	<form id="myForm" method="Get">
+		<p>Account Name<br><input type="text" name="account" size="33" placeholder="your account name" pattern="[A-Za-z]+[A-Za-z0-9]*" required> </p>
+
+		<p>Display Name<br><input type="text" name="display" size="33" placeholder="your display name"> </p>
+
+		<p>Email Address: a@b.c<br><input type="text" name="email" size="33" placeholder="a@b.c" pattern="\w+@\w+.[A-Za-z0-9]+" required></p>
+
+		<p>Phone Number: 123-123-1234<br><input type="text" name="phone" size="33" placeholder="123-123-1234" pattern="\d\d\d-\d\d\d-\d\d\d\d" required></p>
+
+		<p>Date of Birth: 01/31/2001<br><input type="text" name="birthday" size="33" placeholder="MM/DD/YEAR" pattern="\d\d/\d\d/\d\d\d\d" required></p>
+
+		<p>Zipcode: 12345<br><input type="text" name="zipcode" size="33" placeholder="12345" required pattern="\d{5}" required></p>
+
+		<p>Password<br><input type="password" name="password" size="33" required></p>
+
+		<p>Confirm Password<br><input type="password" name="confirmation" size="33" required></p>
+
+
+	    <input type="hidden" name="timestamp">
+
+	    <input type="submit" value="Place Order" onclick="return doValidate()">
+		<input type="reset" value="Clear">
+
+	</form>
+
+	<script>
+	function doValidate(){
+		var form=document.getElementById("myForm");
+		form.timestamp.value=Date.now();
+
+		//set validation message	
+		if(form.account.validity.patternMismatch===true){
+			form.account.setCustomValidity("Account name can only be upper or lower case letters and numbers, but may not start with a number");
+		}else{
+			form.account.setCustomValidity("");
+		}
+		if(form.email.validity.patternMismatch){
+			form.email.setCustomValidity("The e-mail address format is be a@b.c, c doesn't include  _ (underscore) character")
+		}else{
+			form.email.setCustomValidity("");
+		}
+		if(form.phone.validity.patternMismatch){
+			form.phone.setCustomValidity("Phone format is XXX-XXX-XXXX");
+		}else{
+			form.phone.setCustomValidity("");
+		}
+		if(form.birthday.validity.patternMismatch){
+			form.birthday.setCustomValidity("Birthday format is MM/DD/YEAR");
+		}else{
+			form.birthday.setCustomValidity("");
+		}
+		if(form.zipcode.validity.patternMismatch){
+			form.zipcode.setCustomValidity("Zipcode format is XXXXX");
+		}else{
+			form.zipcode.setCustomValidity("");
+		}
+		
+		
+
+		//over 18 years old
+		var now1=new Date();
+		now1.setTime(form.timestamp.value);
+		var year=now1.getFullYear();
+		var month=now1.getMonth();
+		var day=now1.getDay();
+
+		var birth_year=parseInt(form.birthday.value.substring(6))
+		var birth_month=parseInt(form.birthday.value.substring(0,2))
+		var birth_day=parseInt(form.birthday.value.substring(3,5))
+		
+		if (year-birth_year<18 || (year-birth_year==18 && month-year-birth<0) || (year-birth_year==18 && month-year-birth==0 && day-birth_day<0)){
+			window.alert("Only individuals 18 years of age or older on the day of registration are allowed to register!");
+			return false	
+		}
+		
+		
+		//password validation
+		
+		if (form.password.value != form.confirmation.value){
+			form.confirmation.setCustomValidity("Password and password confirmation have to match")
+		}else{
+			form.confirmation.setCustomValidity("");
+		}
+		
+	//			window.alert("Password and password confirmation have to match");
+
+		form.action="formProcessor.html";
+		
+	}
+
+	</script>
+</body>
+</html>
