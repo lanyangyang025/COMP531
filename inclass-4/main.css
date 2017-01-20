@@ -1,0 +1,65 @@
+body{
+	background-color: #9999ff;
+}
+
+nav { 
+	top: 0em;
+	left: 0em;
+	background-color: #ccff66;
+	position: fixed;
+	width: 12em;
+	text-align: center;
+	padding: 2em;
+	border: solid green;
+	border-radius: 2em;
+}
+
+.content div{
+	margin: 3em;
+	background-color: #ECECFF;
+	padding: 2em;
+	border: 0.5em double green;
+	border-radius: 2em 0em 2em 0em;
+}
+
+
+.content div:hover{
+	background: #ccc;
+}
+
+.content {
+	margin-top: 12em;
+	margin-left:  15em;
+	margin-right:  15em;
+}
+
+input[type=button] {
+	padding: 0.5em 1em; 
+	background: #cccccc; 
+    cursor: pointer;
+    border-radius: 0.5em; 
+}
+
+input[type=text] {
+	padding: 5px; 
+	border: 2px solid grey; 
+    border-radius: 5px;
+}
+
+input[type=text]:focus {
+	border-color: black;
+}
+
+#share:hover {
+	background: #ccffff;
+}
+
+#post:hover{
+	background-color: #0099ff;
+	color:white;
+}
+
+span{
+	background-color: #99ff99;
+	font-size: 1.2em;
+}
