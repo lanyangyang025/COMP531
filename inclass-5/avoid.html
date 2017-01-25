@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" xontent="Yiqing Lu">
+    <title>Hello HTML!</title>
+    <script src="avoid.js"></script>
+    <style>
+    	button{
+    		position:absolute;
+    	}
+    	#success{ 
+    		display:None;
+			top: 0em;
+			left: 0em;
+			color: blue;
+			font-size: 1.5em;
+			font-family: Arial;
+			background-color: greenyellow;
+			width: 15em;
+			text-align: center;
+			border: solid red thick;
+			border-radius: 1em;
+		}
+    </style>
+</head>
+
+<body>
+	<button onmouseover="butt_move()" onclick="butt_click()" id="button1">Click Me!</button>
+	<div id='success'>
+		<p>Congratulations!</p>
+		<p>You Won!</p>
+	</div>
+</body>
