@@ -44,8 +44,6 @@ var createApp = function(canvas) {
 }
 
 
-
-
 function model(axis_x,width,height,color,canvas){
 	var c = canvas.getContext("2d");
 	c.fillStyle= blgColors[color];
@@ -130,7 +128,6 @@ function Rect(x,y){
 	this.y=y;
 }
 
-// display object主要是根据自己的属性知道如何绘制自己
 Circle.prototype.update = function (ctx) {
     fillcircle(this.x, this.y, this.r, "#FFCC33", ctx)
 };
