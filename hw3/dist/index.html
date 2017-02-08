@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" xontent="Yiqing Lu">
+    <title>FRUIT LINK!</title>
+    <script type="text/javascript" src="match.js"></script> 
+	<script type="text/javascript" src="piece.js"></script> 
+	<script type="text/javascript" src="game.js"></script> 
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body onmousedown="isKeyPressed(event)"> 
+<center> 
+<div id="whole"> 
+	<div id="gamePanel"> 
+	</div> 
+	<div id="pieces">
+	</div> 
+	<div id=piece_border> 
+	</div>
+
+	
+	<div id="gameLogo"> 
+	</div> 
+	<div id="scorePanel"> 
+		<span>Score</span> 
+	</div> 
+	<div id="score"> 
+		<span>0</span> 
+	</div> 
+	<div id="highestscorePanel"> 
+		<span>Best Score</span> 
+	</div> 
+	<div id="highestscore"> 
+		<span>0</span> 
+	</div> 
+	<div id="timePanel"> 
+		<span>Time</span> 
+	</div> 
+	<div id="progressbar"> 
+        <div id="bar_text">0</div> 
+    </div> 
+    <div id="selectbar">
+		<select id="select_bar">
+			<option value ="easy">Easy</option>
+			<option value ="medium">Medium</option>
+			<option value="hard">Hard</option>
+		</select>
+    </div>
+	<div id="button"> 
+		<input id="start" type="button" value="start"></input> 
+		<input id="exit" type="button" onclick="Exit()" value="exit"></input> 
+		<input id="reset_cookie" type="button" onclick="Reset_cookie()" value="reset record"></input>
+		<input id="record" type="button" onclick="Record()" value="record"></input>
+	</div> 
+	</div> 
+</div> 
+</center> 
+</body> 
+</html> 
