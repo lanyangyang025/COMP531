@@ -14,34 +14,46 @@ function h(tag, props, ...children) {
 }
 
 function createElement(node) {
-    var element = document.createElement(node.tag)
-    // create the element and return it to the caller
-    // the node might have event listeners that need to be registered
-    // the node might have children that need to be created as well
-    Object.keys(node.props).forEach(function (key, index) {
-        var propName = key
-        if (key === 'className') {
-            propName = 'class'
-        }
-        if (key === 'onClick') {
-            propName = 'onclick'
-             element.addEventListener("click", function eventHandler(evt) {
-                    node.props[key](evt)
-                    update()
+	console.log('Create element called for', node)
+	// create the element and return it to the caller
+	// the node might have event listeners that need to be registered
+	// the node might have children that need to be created as well
+	var curr = document.createElement(node.tag);
+    if(node.props){
+        Object.keys(node.props).forEach(function(key){
+            //class is the attribute for className
+            if (key === "className") {
+                curr.setAttribute("class", node.props[key]);
+                curr.value = node.props[key];
+            } 
+            //click is the attribute for onClick
+            else if (key === "onClick") {
+                curr.addEventListener("click",function(event){
+                    node.props["onClick"](event);
+                    update();
                 })
-        }
-        element.setAttribute(propName, node.props[key])
-    })
+            } 
+            //other kinds of key is primitive name of the attribute 
+            else {
+                curr.setAttribute(key, node.props[key]);
+            }
+        })
+    }
+    if (node.children) {
+        node.children.forEach(function(tag) {
+            if (typeof tag === "string") {
+                //get the tag of the children which will be used in the recursive method
+                curr.innerHTML = tag;
+            } 
 
-    node.children.forEach(function (child) {
-        var childEl = (child instanceof Object)
-          ? createElement(child) 
-          : document.createTextNode(child) 
-        element.appendChild(childEl)
-    })
-
-    	
-    return element
+            else {
+                //recursively call createElement method to traverse and set the values for attributes
+                //for each element
+                curr.appendChild(createElement(tag));
+            }
+        })
+    }
+    return curr;
 }
 
 function changed(node1, node2) {
@@ -54,7 +66,6 @@ function changed(node1, node2) {
 }
 
 function updateElement(parent, newNode, oldNode, index=0) {
-
 	// index will be needed when you traverse children
 	// add the new node to the parent DOM element if
 	// the new node is different from the old node 
@@ -65,13 +76,13 @@ function updateElement(parent, newNode, oldNode, index=0) {
         
         parent.appendChild(createElement(newNode))
     } else {
-    	console.log('update element that may have changed')
-    	// you can use my changed(node1, node2) method above
-    	// to determine if an element has changed or not
-    	// be sure to also update the children!
+        console.log('update element that may have changed')
+        // you can use my changed(node1, node2) method above
+        // to determine if an element has changed or not
+        // be sure to also update the children!
         if (changed(newNode, oldNode)) {
             parent.removeChild(parent.children[index])
-            parent.appendChild(createElement(newNode))
+            parent.appendChild(createElement(newNode));
         } else {
             if(newNode.children){
                 if (newNode.children<oldNode.children) {
@@ -87,6 +98,7 @@ function updateElement(parent, newNode, oldNode, index=0) {
 
         }
     }
+    
 }
 
 const deepCopy = (obj) => {
