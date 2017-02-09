@@ -94,15 +94,14 @@ var func_start=function(){
 					document.cookie="success="+temp1		
 				}
 
-				document.cookie="success="+(get_cookie[1]+1)
+				var temp2=parseInt(get_cookie()[1])+1;
+				document.cookie="success="+temp2;
 				setTimeout(function(){
 					alert("You win!! Your score is "+score+" !!");
 					Restart();
 					delete_track();					
 				},10)
-
-			}	
-		
+			}		
 		}			
 		document.getElementById("pieces").appendChild(img[index]);
 	})
