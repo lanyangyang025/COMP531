@@ -1,6 +1,7 @@
 import { validateProfile } from '../profile/profileActions'
 import Action, {resource, updateError, updateSuccess, goToMain, goToIndex} from '../../actions'
 
+//action when log in
 export const local_login = (dispatch) => {
     const username = document.querySelector("#login_username").value;
     const password = document.querySelector("#login_password").value;
@@ -14,7 +15,7 @@ export const local_login = (dispatch) => {
         })
 }
 
-
+//action when log out
 export function logout() {
     return (dispatch) => {
         resource('PUT', 'logout')
@@ -26,6 +27,7 @@ export function logout() {
     }
 }
 
+//reset all the values 
 export function reset(){
     return({dispatch})=>{
         document.getElementById("username").value = '';
@@ -38,8 +40,7 @@ export function reset(){
     }
 }
 
-
-
+//action when register
 export function register({username1, email1, phone1, birth1, zipcode1, password1, confirm1}) {
     const username=username1.value
     const email=email1.value

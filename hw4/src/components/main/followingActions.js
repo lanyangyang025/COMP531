@@ -1,6 +1,8 @@
 import Promise from 'bluebird'
 import Action, { resource, updateError } from '../../actions'
 
+//actions of deleting a follower and adding a follower
+
 export function delFollower(name) {return getFollowers('DELETE', name)}
 export function addFollower(name) {return getFollowers('PUT', name)}
 

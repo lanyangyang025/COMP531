@@ -10,6 +10,7 @@ let articles1 = articlesInfo.articles
 const articles_org=Object.keys(articles1).map((id) => articles1[id])
 var articles=articles_org
 
+//the content of all the articles
 const ArticleView = ({dispatch}) => {
 let keyword
 return(

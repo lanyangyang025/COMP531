@@ -6,8 +6,7 @@ import Following from './following'
 import Nav from './nav'
 import ArticleView from '../article/articleView'
 
-
-
+//content of the main page
 const Main = () => (
     <div>
         <Nav/>

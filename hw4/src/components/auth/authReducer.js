@@ -6,6 +6,7 @@ const state_initial={
 	success: ''
 }
 
+//reducer of the landing page
 const authReducer = (state={
 	state_initial
 }, action) => {

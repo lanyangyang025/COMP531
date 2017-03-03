@@ -4,7 +4,7 @@ import { Follower } from './follower'
 
 import { addFollower, delFollower, dispatch } from './followingActions'
 
-
+//content of all the followers
 export const Following = ({error='', followers, addTodo, dispatch }) => {
     let newFollower='';
 

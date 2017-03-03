@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { Action, goToIndex, goToProfile } from '../../actions'
 import {logout} from '../auth/authActions'
 
+//content of navigating different pages
 const Nav = ({ goToProfile, logout, username }) => {
 
 return(
@@ -17,17 +18,6 @@ return(
             </div>
         </div>
     </nav>
-	/*
-    <div>
-        <div id="main_nav">
-
-            <li><a href="#" id="main_profile" onClick={goToProfile}>Edit Your Profile</a></li>
-
-            <li><a href="#" id='main_logout' onClick={logout}>Log out {username}</a></li>
- 
-        </div>
-    </div>
-    */
 )
 
 }

@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { showComments, addComment } from './articleActions'
 import { Comment } from './comment'
 
+//content of a card
 export const Article = ({ _id, author, date, text, img, comments, btnShowValue, btnAddValue}) => (
 	<div className="panel panel-default text-left">
         <div className="panel-body">

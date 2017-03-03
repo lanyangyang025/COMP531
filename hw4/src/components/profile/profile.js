@@ -29,7 +29,7 @@ ErrorMessage = connect((state) => {
     return { error: state.authReducer.error, success: state.authReducer.success }
 })(ErrorMessage)
 
-
+//content of the profile page
 const Profile = () => {
     return (
         <div>

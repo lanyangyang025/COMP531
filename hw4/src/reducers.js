@@ -4,6 +4,7 @@ import mainReducer from './components/main/mainReducer'
 import profileReducer  from './components/profile/profileReducer'
 import articleReducer  from './components/article/articleReducer'
 
+//combine all the reducers
 const Reducer = combineReducers({
 		authReducer : authReducer,
 		mainReducer : mainReducer,

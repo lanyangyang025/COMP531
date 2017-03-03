@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 
 import {register,reset} from './authActions'
 
+
+//content of the register table
 const Register = ({ dispatch }) => {
 
 let username1, email1, phone1,  zipcode1, birth1, password1, confirm1

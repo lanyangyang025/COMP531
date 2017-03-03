@@ -12,7 +12,7 @@ const initial_articles = {
 }
 
 
-
+//reducer of the main page
 export function followers(state = initial_followers, action) {
     switch(action.type) {
         case Action.FOLLOWER_UPDATE:

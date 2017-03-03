@@ -5,6 +5,8 @@ import Landing from './components/auth/landing'
 import Main from './components/main/main'
 import Profile from './components/profile/profile'
 
+
+//refer to specific page
 const App = ({ location }) => {
 
     if (location == 'MAIN_PAGE') { 

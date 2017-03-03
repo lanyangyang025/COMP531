@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import Login from './login'
 import Register from './register'
 
+//display error message
 let ErrorMessage = ({error='', success=''}) => (
     <div className="row">
         { error.length == 0 ? '' :
@@ -31,7 +32,7 @@ ErrorMessage = connect((state) => {
 
 
 
-
+//content of the landing page
 const Landing = () => (
     <div>
         <div className="landing_index text-center">

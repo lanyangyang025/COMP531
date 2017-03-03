@@ -1,5 +1,6 @@
 import Action, { updateError, updateSuccess, resource } from '../../actions'
 
+//acton of updating the username
 function updateUsername(){
     return (dispatch) => {
         document.getElementById("profile_username").innerHTML= document.getElementById("pro_username").value;
@@ -11,7 +12,7 @@ function updateUsername(){
     }
 }
 
-
+//acton of updating the email
 function updateEmail(){
     return (dispatch) => {
         document.getElementById("profile_email").innerHTML = document.getElementById("pro_email").value;
@@ -23,6 +24,7 @@ function updateEmail(){
     }
 }
 
+//acton of updating the phone number
 function updatePhone(){
     return (dispatch) => {
         document.getElementById("profile_phone").innerHTML=document.getElementById("pro_phone").value
@@ -34,6 +36,7 @@ function updatePhone(){
     }
 }
 
+//acton of updating the zipcode
 function updateZipcode(){
     return (dispatch) => {
         document.getElementById("profile_zipcode").innerHTML=document.getElementById("pro_zipcode").value
@@ -45,6 +48,7 @@ function updateZipcode(){
     }
 }
 
+//acton of updating the password
 function updatePassword(){
     return (dispatch) => {
         const payload = { password: document.getElementById("pro_password").value };
@@ -55,6 +59,7 @@ function updatePassword(){
     }
 }
 
+//acton of updating the confirm password
 function updateConfirm(){
     return (dispatch) => {
         const payload = { confirm: document.getElementById("pro_confirm").value };
@@ -65,7 +70,7 @@ function updateConfirm(){
     }
 }
 
-
+//action of updating the user profile
 export function update_profile() {
     const username=document.getElementById("pro_username").value
     const email=document.getElementById("pro_email").value
@@ -114,6 +119,7 @@ export function update_profile() {
     }
 }
 
+//action to verify whether the pattern of each text is correct
 export function validateProfile({username, email, phone, zipcode, password, confirm}) {
     var pattern;
     pattern = new RegExp("^[a-zA-Z][a-zA-Z0-9]+$");

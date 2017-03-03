@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { updateImage } from './profileActions'
 
+//The current user profile
 const Avatar = ({username, email, phone, zipcode, password, confirm, dispatch}) =>{
 
 return( 

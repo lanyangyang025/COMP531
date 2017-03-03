@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 
 import { addFollower, delFollower } from './followingActions'
 
+//content of a follower
 export const Follower = ({name, avatar, headline }) => (
     <div className="users-container" name="follower">
         <div className="user-container">

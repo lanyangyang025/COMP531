@@ -1,5 +1,7 @@
 export const url = 'https://webdev-dummy.herokuapp.com'
 
+//action name
+
 const Action = {
 
      ERROR: 'ERROR'
@@ -37,6 +39,7 @@ export function goToMain() { return { type: Action.GO_MAIN }}
 export function goToIndex() { return { type: Action.GO_INDEX }}
 
 
+//fetch from url
 export function resource(method, endpoint, payload, submitJson = true) {
     const options = {credentials: 'include', method}
     if (submitJson) options.headers = {'Content-Type': 'application/json'}

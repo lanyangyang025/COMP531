@@ -5,6 +5,8 @@ const initialState = {
 	searchKeyword: ''
 }
 
+
+//the reducer of the article component
 const articleReducer = (state = initialState, action) => {
 	switch(action.type) {
 		case 'SHOW_COMMENTS':{

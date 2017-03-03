@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import {update_profile} from './profileActions'
 
-
+//content of the updating table
 const ProdfileForm = ({ dispatch }) => {
 
 let username1, email1, phone1,  zipcode1, password1, confirm1

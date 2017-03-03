@@ -1,5 +1,6 @@
 import Action, { updateError, resource } from '../../actions'
 
+//action of updating headline
 export function updateHeadline(){
 		return (dispatch) => {
 	    const payload = { headline: document.getElementById("new_headline").value };

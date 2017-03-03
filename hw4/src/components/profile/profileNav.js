@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 import { Action, goToIndex, goToMain } from '../../actions'
 import {logout} from '../auth/authActions'
 
+
+//content of navigating different pages
 const ProfileNav = ({ goToMain, logout, username }) => {
 
 return(

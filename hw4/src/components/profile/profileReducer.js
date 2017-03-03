@@ -11,7 +11,7 @@ const state_initial={
     confirm:'123456'
 }
 
-
+//reducer of the profile page
 const profileReducer = (state={
 	state_initial
 }, action) => {

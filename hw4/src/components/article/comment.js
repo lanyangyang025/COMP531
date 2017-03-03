@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
+//content of a comment
 export const Comment = ( {date, author, text} ) => (
 	<div className="col-sm-9 col-sm-offset-3">
 	  	<div className="well">

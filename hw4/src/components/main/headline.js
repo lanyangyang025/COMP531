@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { updateHeadline } from './mainActions'
 
+//content of the headline
 export const Headline= ({username, headline, updateHeadline}) =>{
 
     let newheadline;

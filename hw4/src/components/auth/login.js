@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 
 import {local_login} from './authActions'
 
+//content of the login table 
 const Login = ({login}) => {
 
     let username, password
