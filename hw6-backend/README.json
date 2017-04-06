@@ -1,0 +1,5 @@
+{
+	"netid": "yl128",
+    "frontend": "http://waggish-discovery.surge.sh/",
+    "backend": "https://peaceful-harbor-49869.herokuapp.com/"
+}

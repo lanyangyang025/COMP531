@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome 57.0.2987 (Windows 10 0.0.0)" package="" timestamp="2017-04-05T04:12:31" id="0" hostname="DESKTOP-6U02O11" tests="29" errors="0" failures="0" time="0.023">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36"/>
+  </properties>
+  <testcase name="Test actions resource should be a resource (i.e., mock a request)" time="0.001" classname="Chrome_57_0_2987_(Windows_10_0_0_0).Test actions"/>
+  <testcase name="Test actions resource should give me the http error" time="0" classname="Chrome_57_0_2987_(Windows_10_0_0_0).Test actions"/>
+  <testcase name="Test actions resource should be POSTable" time="0.001" classname="Chrome_57_0_2987_(Windows_10_0_0_0).Test actions"/>
+  <testcase name="Test actions should update error message (for displaying error mesage to user)" time="0.003" classname="Chrome_57_0_2987_(Windows_10_0_0_0).Test actions"/>
+  <testcase name="Test actions should update success message (for displaying success message to user)" time="0" classname="Chrome_57_0_2987_(Windows_10_0_0_0).Test actions"/>
+  <testcase name="Test actions should navigate to landing)" time="0" classname="Chrome_57_0_2987_(Windows_10_0_0_0).Test actions"/>
+  <testcase name="Test actions should navigate to profile)" time="0" classname="Chrome_57_0_2987_(Windows_10_0_0_0).Test actions"/>
+  <testcase name="Test actions should navigate to main)" time="0" classname="Chrome_57_0_2987_(Windows_10_0_0_0).Test actions"/>
+  <testcase name="Test Article should fetch articles (mocked request)" time="0" classname="Chrome_57_0_2987_(Windows_10_0_0_0).Test Article"/>
+  <testcase name="Test Article should update the search keyword" time="0.001" classname="Chrome_57_0_2987_(Windows_10_0_0_0).Test Article"/>
+  <testcase name="Test Article Reducer should return the initial state" time="0" classname="Chrome_57_0_2987_(Windows_10_0_0_0).Test Article Reducer"/>
+  <testcase name="Test Article Reducer should set the search keyword" time="0" classname="Chrome_57_0_2987_(Windows_10_0_0_0).Test Article Reducer"/>
+  <testcase name="Test Article Reducer should fetch articles" time="0" classname="Chrome_57_0_2987_(Windows_10_0_0_0).Test Article Reducer"/>
+  <testcase name="Test AritcleView should fetch articles (mocked request)" time="0" classname="Chrome_57_0_2987_(Windows_10_0_0_0).Test AritcleView"/>
+  <testcase name="Test AritcleView should dispatch actions to create a new article" time="0.006" classname="Chrome_57_0_2987_(Windows_10_0_0_0).Test AritcleView"/>
+  <testcase name="Test Auth should not log in an invalid user" time="0.004" classname="Chrome_57_0_2987_(Windows_10_0_0_0).Test Auth"/>
+  <testcase name="Test Auth should log out a user (state should be cleared)" time="0.004" classname="Chrome_57_0_2987_(Windows_10_0_0_0).Test Auth"/>
+  <testcase name="Test Auth Reducer should return the initial state" time="0" classname="Chrome_57_0_2987_(Windows_10_0_0_0).Test Auth Reducer"/>
+  <testcase name="Test Auth Reducer Navigate to LANDING Page" time="0" classname="Chrome_57_0_2987_(Windows_10_0_0_0).Test Auth Reducer"/>
+  <testcase name="Test Auth Reducer Navigate to Profile Page" time="0" classname="Chrome_57_0_2987_(Windows_10_0_0_0).Test Auth Reducer"/>
+  <testcase name="Test Auth Reducer Navigate to Main Page" time="0" classname="Chrome_57_0_2987_(Windows_10_0_0_0).Test Auth Reducer"/>
+  <testcase name="Test Auth Reducer should state success (for displaying success message to user)" time="0.001" classname="Chrome_57_0_2987_(Windows_10_0_0_0).Test Auth Reducer"/>
+  <testcase name="Test Auth Reducer should state error (for displaying error message to user)" time="0" classname="Chrome_57_0_2987_(Windows_10_0_0_0).Test Auth Reducer"/>
+  <testcase name="Test Profile headline should update headline" time="0" classname="Chrome_57_0_2987_(Windows_10_0_0_0).Test Profile headline"/>
+  <testcase name="Test Main Reducer should return the initial state" time="0" classname="Chrome_57_0_2987_(Windows_10_0_0_0).Test Main Reducer"/>
+  <testcase name="Test Main Reducer should set headline" time="0" classname="Chrome_57_0_2987_(Windows_10_0_0_0).Test Main Reducer"/>
+  <testcase name="Test Profile should fetch the user email information" time="0.001" classname="Chrome_57_0_2987_(Windows_10_0_0_0).Test Profile"/>
+  <testcase name="Test Profile should fetch the user zipcode information" time="0.001" classname="Chrome_57_0_2987_(Windows_10_0_0_0).Test Profile"/>
+  <testcase name="Test Profile Reducer should return the initial state" time="0" classname="Chrome_57_0_2987_(Windows_10_0_0_0).Test Profile Reducer"/>
+  <system-out>
+    <![CDATA[
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>

@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src\components\article\articleReducer.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/components/article/</a> articleReducer.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">43.59% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>17/39</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">33.33% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>10/30</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">25% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">26.67% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>8/30</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">6 statements, 1 function, 3 branches</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const initialState = {
+	articles: [] ,
+	searchKeyword: '',
+	comments: []
+}
+&nbsp;
+&nbsp;
+//the reducer of the article component
+const articleReducer = (state = <span class="branch-0 cbranch-no" title="branch not covered" >i</span>nitialState, action) =&gt; {
+	switch(action.type) {
+		case <span class="branch-0 cbranch-no" title="branch not covered" >'SHOW_COMMENT':</span>
+			return <span class="cstat-no" title="statement not covered" >Object.assign({}, state, </span>
+				{articles : state.articles.map(<span class="fstat-no" title="function not covered" >(article) =&gt; </span>
+					(<span class="cstat-no" title="statement not covered" >article._id === action.payload._id? {...article, displayComment : true} :  article )</span>
+				)}
+			)
+&nbsp;
+		case <span class="branch-1 cbranch-no" title="branch not covered" >'HIDE_COMMENT':</span>
+			return <span class="cstat-no" title="statement not covered" >Object.assign({}, state, </span>
+				{articles : state.articles.map(<span class="fstat-no" title="function not covered" >(article) =&gt; </span>
+					(<span class="cstat-no" title="statement not covered" >article._id === action.payload._id?  {...article, displayComment : false} :  article )</span>
+				)}
+			)
+&nbsp;
+		case <span class="branch-2 cbranch-no" title="branch not covered" >'ADD_COMMENT':</span>
+			return <span class="cstat-no" title="statement not covered" >Object.assign({}, state, </span>
+				{articles : state.articles.map(<span class="fstat-no" title="function not covered" >(article) =&gt; </span>
+					(<span class="cstat-no" title="statement not covered" >article._id === action.payload._id? {...article, displayaddComment : false} :  article )</span>
+				)}
+			)
+&nbsp;
+		case <span class="branch-3 cbranch-no" title="branch not covered" >'HIDE_ADD_COMMENT':</span>
+			return <span class="cstat-no" title="statement not covered" >Object.assign({}, state, </span>
+				{articles : state.articles.map(<span class="fstat-no" title="function not covered" >(article) =&gt; </span>
+					(<span class="cstat-no" title="statement not covered" >article._id === action.payload._id? {...article, displayaddComment : true} :  article )</span>
+				)}
+			)
+&nbsp;
+		case 'SEARCH_KEYWORD':
+            return { ...state, searchKeyword: action.keyword }; 
+        case 'GET_ARTICLE':
+            return {...state, articles: action.articles};
+        case <span class="branch-6 cbranch-no" title="branch not covered" >'GET_UPDATE':</span>
+			return <span class="cstat-no" title="statement not covered" >Object.assign({}, state, </span>
+				{articles : state.articles.map(<span class="fstat-no" title="function not covered" >(article1) =&gt; {</span>
+        			
+				if(<span class="cstat-no" title="statement not covered" >article1._id === action.articles[0]._id){</span>
+					action.<span class="cstat-no" title="statement not covered" >articles[0].displayComment=article1.displayComment</span>
+					return <span class="cstat-no" title="statement not covered" >action.articles[0]</span>
+				}
+				else{
+					return <span class="cstat-no" title="statement not covered" >article1</span>
+				}
+			})}
+			)
+			
+&nbsp;
+		case <span class="branch-7 cbranch-no" title="branch not covered" >'GET_UPDATE_1':</span>
+			return <span class="cstat-no" title="statement not covered" >Object.assign({}, state, </span>
+				{articles : state.articles.map(<span class="fstat-no" title="function not covered" >(article1) =&gt; {</span>
+        			
+				if(<span class="cstat-no" title="statement not covered" >article1._id === action.articles[0]._id){</span>
+					action.<span class="cstat-no" title="statement not covered" >articles[0].displayComment=article1.displayComment</span>
+					action.<span class="cstat-no" title="statement not covered" >articles[0].displayaddComment=article1.displayaddComment</span>
+					return <span class="cstat-no" title="statement not covered" >action.articles[0]</span>
+				}
+				else{
+					return <span class="cstat-no" title="statement not covered" >article1</span>
+				}
+			})}
+			)
+&nbsp;
+        case <span class="branch-8 cbranch-no" title="branch not covered" >'ADD_ARTICLES':</span>
+            let <span class="cstat-no" title="statement not covered" >articles = state.articles;</span>
+            articles[<span class="cstat-no" title="statement not covered" >action.article._id] = action.article</span>
+            return { ...<span class="cstat-no" title="statement not covered" >state, articles };</span>
+	    default:
+	    	return state;
+	}
+}
+&nbsp;
+export default articleReducer
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Apr 04 2017 23:12:31 GMT-0500 (中部夏令时)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

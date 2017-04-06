@@ -1,0 +1,17 @@
+<testsuite name="Mocha Tests" tests="15" failures="0" errors="0" skipped="0" timestamp="Thu, 06 Apr 2017 00:23:37 GMT" time="0.183">
+<testcase classname="Test Articles Functions" name="returns at least three articles" time="0.063"/>
+<testcase classname="Test Articles Functions" name="returns a newly added article" time="0.05"/>
+<testcase classname="Test Articles Functions" name="returns the desired article by article id" time="0.004"/>
+<testcase classname="Test Articles Functions" name="should return the articles with multiple id" time="0.007"/>
+<testcase classname="Test Articles Functions" name="should return nothing for an invalid id" time="0.005"/>
+<testcase classname="Test Headline Functions" name="returns the headline message for the default logged in user" time="0.004"/>
+<testcase classname="Test Headline Functions" name="updates the headline message GET /headlines returns" time="0.008"/>
+<testcase classname="Test Headline Functions" name="returns new headline messages for default user" time="0.004"/>
+<testcase classname="Test Headline Functions" name="returns headline for requestered user" time="0.003"/>
+<testcase classname="Validate Profile Functions" name="returns default email for requested user, or default user" time="0.003"/>
+<testcase classname="Validate Profile Functions" name="updates email value for default user" time="0.004"/>
+<testcase classname="Validate Profile Functions" name="returns default zipcode for requested user, or default user" time="0.004"/>
+<testcase classname="Validate Profile Functions" name="updates zipcode value for default user" time="0.004"/>
+<testcase classname="Validate Profile Functions" name="returns default avatar url for requested user, or default user" time="0.003"/>
+<testcase classname="Validate Profile Functions" name="updates avatar value for default user" time="0.007"/>
+</testsuite>
