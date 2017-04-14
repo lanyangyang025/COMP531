@@ -83,7 +83,7 @@ const getAvatars = (req, res) => {
 			username: 'SomeUser'+avatar,
 			avatar: avatar === profile.username?profile.avatar : avatar
 			}))
-		res.send({ avatars : getAvatars})
+		res.send({ avatars : get_avatars})
 	}
 	else {
 		res.send({"username" : profile.username, "avatar": profile.avatar})	
