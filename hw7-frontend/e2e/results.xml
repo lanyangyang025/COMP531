@@ -1,0 +1,18 @@
+
+> starter@1.0.0 e2e:base C:\Users\justaway\Desktop\hw4_1\frontend
+> mocha --opts e2e/mocha.opts e2e/*.spec.js "--reporter" "xunit"
+
+<testsuite name="Mocha Tests" tests="12" failures="0" errors="0" skipped="0" timestamp="Wed, 05 Apr 2017 03:15:37 GMT" time="39.96">
+<testcase classname="Test Landing Page" name="should login as test user" time="0.556"/>
+<testcase classname="Test Main Page" name="Create new article and validate article appears in feed" time="1.9"/>
+<testcase classname="Test Main Page" name="Edit an article and validate the article text has updated" time="1.743"/>
+<testcase classname="Test Main Page" name="Update the headline and verify the change" time="3.037"/>
+<testcase classname="Test Main Page" name="Should Add a follower and increase the count by 1" time="4.142"/>
+<testcase classname="Test Main Page" name="Should Remove a follower and decrease count by 1" time="1.665"/>
+<testcase classname="Test Main Page" name="Search for special &amp;quot" time="1.794"/>
+<testcase classname="Test Profile Page" name="Update user email and verify" time="3.157"/>
+<testcase classname="Test Profile Page" name="Update user zipcode and verify" time="2.794"/>
+<testcase classname="Test Profile Page" name="Update user password and verify" time="2.032"/>
+<testcase classname="Test Landing Page" name="should register as a new user" time="0.568"/>
+<testcase classname="shutdown" name="now" time="0.059"/>
+</testsuite>
